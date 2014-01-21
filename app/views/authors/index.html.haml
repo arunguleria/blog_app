@@ -1,0 +1,17 @@
+%h1 Authors
+%br/
+= link_to fa_icon('plus') + " Create New Author", new_author_path, class: 'btn btn-primary'
+.author
+  %table.table.table-striped
+    %tr
+      %th Name
+      %th Email
+      %th Edit
+    - @authors.each do |author|
+      %tr
+        %td= author.name.titleize
+        %td
+          = fa_icon('envelope')
+          = author.email
+        %td
+          = link_to "Show", author_url(author), class: 'btn btn-default'

@@ -1,0 +1,19 @@
+%h1 Author information
+%table.table.table-striped
+  %tr
+    %th firstname
+    %th lastname
+    %th email
+  %tr
+    %td
+      = @author.first_name
+    %td
+      = @author.last_name
+    %td
+      = fa_icon('envelope')
+      = @author.email
+%hr/
+= link_to "Edit", edit_author_url(@author), class: 'btn btn-primary'
+= link_to "Delete", author_url(@author), method: :delete, data: {confirm: "Are you sure to destroy? "}, class: 'btn btn-danger'
+= link_to "View Article", author_articles_url(@author), class: 'btn btn-info' 
+= link_to "View All Authors", authors_url, class: 'btn btn-info'

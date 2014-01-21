@@ -1,0 +1,14 @@
+<div>
+  Hello <%= @author.name %>,
+  <br /><br />
+  
+  Your following article has been published successfully:
+  <br /><br />
+  
+  <div style="padding: 10px; font-size: 14px; background-color: #f7f7f7">
+    <strong><%= @article.title %></strong>
+    <br />
+    <%= raw @article.body %>
+  </div>
+</div>
+

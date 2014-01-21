@@ -1,0 +1,11 @@
+= simple_form_for @author do |f|
+ 
+  = f.input :first_name
+  = f.input :last_name
+  = f.input :email
+  
+  .form-actions
+    = f.submit (@author.new_record? ? "Create Author" : "Save Changes"), class: 'btn btn-success'  
+    or
+    = link_to "Cancel", authors_path, class: 'btn btn-default'
+ 

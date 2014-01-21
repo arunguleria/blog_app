@@ -33,6 +33,17 @@ group :doc do
 end
 
 gem 'therubyracer'
+gem 'thin'
+gem "less-rails"
+gem "twitter-bootstrap-rails"
+gem 'simple_form', github: 'zlx/simple_form_bootstrap3'
+gem 'kaminari'
+gem 'paperclip', '~> 3.0'
+gem "font-awesome-rails"
+
+
+gem 'haml'
+gem 'haml-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
@@ -44,4 +55,7 @@ gem 'therubyracer'
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]
+
+
+

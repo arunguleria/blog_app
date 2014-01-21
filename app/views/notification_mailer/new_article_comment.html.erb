@@ -1,0 +1,12 @@
+<div>
+  Hello <%= @author.name %>,
+  <br /><br />
+  
+  Your article <strong><%= @article.title %></strong> has received the following comment:
+  <br /><br />
+  
+  <div style="padding: 10px; font-size: 14px; background-color: #f7f7f7">
+    <%= raw @comment.comment %>
+  </div>
+</div>
+

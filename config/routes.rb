@@ -1,9 +1,23 @@
 BlogApp::Application.routes.draw do
+
+  # user signin/signput/logout routes
+  get "users/signup", as: :signup
+  post "users/signup"  
+  get "users/signin", as: :signin
+  post "users/signin"
+  get "users/logout", as: :logout
+  
+  
+  resources :authors do
+      resources :articles
+  end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'authors#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

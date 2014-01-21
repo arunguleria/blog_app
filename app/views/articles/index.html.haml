@@ -1,0 +1,11 @@
+%h1 Articles
+= link_to fa_icon('plus') + " Create New Article", new_author_article_path(@author)
+%br/
+- @articles.each do |article|
+  .article
+    %strong
+      = link_to article.title.titleize, author_article_url(@author, article)
+    %br/
+    = raw (truncate(article.body, length: 50))
+    
+= link_to "View Author", author_url(@author), class: 'btn btn-info'

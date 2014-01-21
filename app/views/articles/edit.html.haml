@@ -1,0 +1,9 @@
+%h1 Edit Article
+= simple_form_for @article, :url => author_article_path(@author, @article), :method => :put do |f|
+
+  = f.input :title
+  = f.input :body, as: :text
+  
+  = f.submit "Save this article"
+  or
+  = link_to "Cancel", author_articles_path(@author), class: 'btn btn-default'

@@ -1,0 +1,10 @@
+%h1= @article.title.titleize
+= simple_format @article.body
+%hr/
+
+
+= link_to fa_icon('edit') + " Edit", edit_author_article_url(@author, @article), class: 'btn btn-primary' 
+= link_to fa_icon('trash-o') + " Delete", author_article_url(@author, @article), method: :delete, data: {confirm: "Are you sure to destroy this record? "}, class: 'btn btn-danger'
+ 
+= link_to "View All Articles", author_articles_url, class: 'btn btn-info' 
+= link_to "Author detail", author_url(@author), class: 'btn btn-info'
